@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Window Example</title>
+    <style>
+        /* Style for the web window */
+        #webWindow {
+            
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Trigger button to open the web window -->
+<button onclick="openWebWindow()">Open Web Window</button>
+
+<!-- Web Window -->
+<div id="webWindow">
+    <h2>Web Window Content</h2>
+    <p>This is the content of the web window.</p>
+    <button onclick="closeWebWindow()">Close</button>
+</div>
+
+<script>
+    // Function to open the web window
+    function openWebWindow() {
+        document.getElementById('webWindow').style.display = 'block';
+    }
+
+    // Function to close the web window
+    function closeWebWindow() {
+        document.getElementById('webWindow').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
